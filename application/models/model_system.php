@@ -69,5 +69,13 @@
             $this->db->where($where);
             $this->db->delete($table);
         }
+
+        function get_Kata_mutiara()
+	{
+		# code...
+		$query = $this->db->get('masyarakat');
+		return $query->row();
+    }
+    
     }
 ?>

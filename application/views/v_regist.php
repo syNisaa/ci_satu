@@ -56,9 +56,12 @@
     </div>
     <div class="contain text-center">
     <?php foreach($masyarakat as $u){ ?>
+
 	<form action="<?php echo base_url(). 'wel/update'; ?>" method="post">
-    <input type="hidden" name="ids" value="<?php echo $u->id ?>">
-		<table style="margin:20px auto;">
+    
+     <input type="hidden" name="ids" value="<?php echo $u->id ?>">
+		
+        <table style="margin:20px auto;">
 			<tr>
 				<td>Nama</td>
 				<td>

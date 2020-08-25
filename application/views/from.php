@@ -29,6 +29,24 @@
         </div>
     </nav>    
 <div class="container">
+    
+    <?php
+
+        $this->session->set_userdata('favourite_website', 'http://tutsplus.com');
+     
+// set array of items in session
+        $arraydata = array(
+                'pengaduan'  => 'nama',
+                'website'     => 'http://code.tutsplus.com',
+                'twitter_id' => '@sajalsoni',
+                'interests' => array('tennis', 'travelling')
+        );
+        $this->session->set_userdata($arraydata);
+        
+        /**** GET SESSION DATA ****/
+        // get data from session
+        echo "Favourite Website: ". $this->session->userdata('pengaduan');
+            ?>
     <h5 style="text-align:center">Ayo Tulis Aduan Mu disini </h5>
     <br>
 
