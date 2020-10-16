@@ -1,0 +1,159 @@
+
+header {
+    padding: 2em 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9;
+    margin: 0 auto; }
+    @media screen and (max-width: 768px) {
+      header {
+        padding: 2em 0; } }
+    header .colorlib-navbar-brand {
+      float: left; }
+      header .colorlib-navbar-brand .colorlib-logo {
+        font-size: 24px;
+        text-transform: uppercase;
+        color: #000;
+        font-family: "Playfair Display", Georgia, serif;
+        font-weight: 700;
+        letter-spacing: 10px;
+        display: block;
+        text-align: center; }
+        header .colorlib-navbar-brand .colorlib-logo:hover {
+          text-decoration: none !important; }
+        header .colorlib-navbar-brand .colorlib-logo:active, header .colorlib-navbar-brand .colorlib-logo:focus {
+          outline: none;
+          text-decoration: none; }
+  
+#colorlib-hero {
+    width: 100%;
+    clear: both; }
+    #colorlib-hero .hero-flex {
+      width: 100%;
+      z-index: 0;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-flex-wrap: wrap;
+      -moz-flex-wrap: wrap; }
+      #colorlib-hero .hero-flex .col-three-forth {
+        width: 60%;
+        z-index: -1;
+        float: left;
+        position: relative; }
+      #colorlib-hero .hero-flex .col-one-forth {
+        width: 40%;
+        float: left;
+        position: relative; }
+      #colorlib-hero .hero-flex .display-t {
+        display: table;
+        width: 100%; }
+      #colorlib-hero .hero-flex .display-tc {
+        display: table-cell;
+        vertical-align: middle; }
+      #colorlib-hero .hero-flex .number {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        font-size: 220px;
+        text-align: right;
+        color: #f2f2f2;
+        font-weight: 700; }
+        @media screen and (max-width: 768px) {
+          #colorlib-hero .hero-flex .number {
+            display: none; } }
+      #colorlib-hero .hero-flex .text-inner {
+        display: block;
+        width: 100%;
+        margin-left: -5em; }
+        #colorlib-hero .hero-flex .text-inner h2 {
+          font-size: 58px;
+          font-weight: 700;
+          letter-spacing: 2px; }
+          @media screen and (max-width: 768px) {
+            #colorlib-hero .hero-flex .text-inner h2 {
+              font-size: 24px; } }
+        #colorlib-hero .hero-flex .text-inner .tag {
+          display: block;
+          letter-spacing: 7px;
+          margin-bottom: 15px;
+          text-transform: uppercase;
+          font-size: 13px; }
+        #colorlib-hero .hero-flex .text-inner .desc {
+          padding-right: 3em;
+          position: relative; }
+          @media screen and (max-width: 768px) {
+            #colorlib-hero .hero-flex .text-inner .desc {
+              padding: 1em;
+              background: #fff;
+              width: 100%; } }
+          @media screen and (max-width: 480px) {
+            #colorlib-hero .hero-flex .text-inner .desc {
+              padding: 1em;
+              background: #fff;
+              width: 140%; } }
+          #colorlib-hero .hero-flex .text-inner .desc:after {
+            position: absolute;
+            top: 30px;
+            bottom: 0;
+            right: 0;
+            content: '';
+            width: 200px;
+            height: 1px;
+            background: #000; }
+            @media screen and (max-width: 768px) {
+              #colorlib-hero .hero-flex .text-inner .desc:after {
+                opacity: 0; } }
+        #colorlib-hero .hero-flex .text-inner .btn-view {
+          font-size: 13px;
+          letter-spacing: 7px;
+          color: #000;
+          text-transform: uppercase;
+          border: 1px solid #000;
+          padding: 7px;
+          text-decoration: none; }
+          @media screen and (max-width: 768px) {
+            #colorlib-hero .hero-flex .text-inner .btn-view {
+              letter-spacing: 2px; } }
+    #colorlib-hero .owl-theme .owl-controls {
+      position: absolute;
+      bottom: 0;
+      left: 7.3em;
+      right: 0;
+      width: 180px;
+      display: block;
+      margin: 0 auto; }
+      @media screen and (max-width: 768px) {
+        #colorlib-hero .owl-theme .owl-controls {
+          left: 0; } }
+    #colorlib-hero .owl-theme .owl-controls .owl-nav [class*=owl-] {
+      padding: 8px 15px;
+      background: #fff;
+      border: none;
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      -ms-border-radius: 0;
+      border-radius: 0; }
+      #colorlib-hero .owl-theme .owl-controls .owl-nav [class*=owl-] i {
+        border: none; }
+      #colorlib-hero .owl-theme .owl-controls .owl-nav [class*=owl-]:hover {
+        background: #F9CE00;
+        border: none; }
+    #colorlib-hero .owl-carousel .owl-controls .owl-nav .owl-next,
+    #colorlib-hero .owl-carousel .owl-controls .owl-nav .owl-prev {
+      margin: 1px; }
+      #colorlib-hero .owl-carousel .owl-controls .owl-nav .owl-next i,
+      #colorlib-hero .owl-carousel .owl-controls .owl-nav .owl-prev i {
+        font-size: 14px;
+        color: #000;
+        background: transparent; }
+      #colorlib-hero .owl-carousel .owl-controls .owl-nav .owl-next:hover i,
+      #colorlib-hero .owl-carousel .owl-controls .owl-nav .owl-prev:hover i {
+        color: white; }

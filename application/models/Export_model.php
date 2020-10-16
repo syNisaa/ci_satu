@@ -18,6 +18,14 @@ class Export_model extends CI_Model {
         return $this->db->get('masyarakat')->result();
       }
     
+
+      public function listing() {
+        $this->db->select('*');
+        $this->db->from('masyarakat');
+        $query = $this->db->get();
+        return $query->result();
+        }
+       
       
 // nge get
 public function get_user(){
@@ -30,4 +38,9 @@ public function count_user(){
     return $data->num_rows();
 }
 
+public function get_all()
+{
+ $data = $this->db->get('masyarakat')->result();
+     return $data;
+}
 }

@@ -1,118 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="<?php echo base_url('assets/css/bootstrap.min.css')?>">
-    <title>Document</title>
+	<title>Bootstrap Part 15 : Membuat Modal dengan Bootstrap</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
-
-<style>
-    body{
-        /* background-image:url(assets/gambarDesain/439.jpg); */
-        overflow-x:hidden;
-        margin-bottom:-50px;
-        height:890px;
-        background-size: cover;
-    }
-
-    .contain form input{
-            margin-top:20px;
-            width:40%;
-            margin : 2% auto;
-            border-radius:20px;
-    }
-    .contain{
-        margin-top:10%;
-    }
-    h5{
-        color:black;
-    }
-    .tulis{
-        text-align:center;
-    }
-    input{
-        text-align:center;
-    }
-    .row{
-        margin-top:6px;
-    }
-    img{
-        margin-left:50px;
-        width:10%;
-    }
-    h2{
-        margin-left:28%;
-    }
-
-</style>
-
 <body>
+   <div class="container">		
+	<center><h1>Membuat Modal dengan Bootstrap | www.malasngoding.com</h1></center>
+	<br/>
+	<!-- Tombol untuk menampilkan modal-->
+	<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Buka Modal</button>
+ 
+	<!-- Modal -->
+	<div id="myModal" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+			<!-- konten modal-->
+			<div class="modal-content">
+				<!-- heading modal -->
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Bagian heading modal</h4>
+				</div>
+				<!-- body modal -->
+				<div class="modal-body">
+					<p>bagian body modal.</p>
+				</div>
+				<!-- footer modal -->
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Tutup Modal</button>
+				</div>
+			</div>
+		</div>
+	</div>
+   </div>
 
-    <div class="row"><br>
-        <a href="<?php echo base_url()."wel/index" ?>"><img src="<?php echo base_url('assets/gambarDesain/back.png')?>" alt=""></a>
-        <h2><font face="Courier New"><b>Yuk join dan sampaikan pendapatmu!</b></font></h2>
+
+
+   <div id="myModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <!-- konten modal-->
+        <div class="modal-content">
+          <!-- heading modal -->
+          <div class="modal-header">
+            <h4 class="modal-title">Logout</h4>
+          </div>
+          <!-- body modal -->
+          <div class="modal-body">
+            <p>Tinggalkan Halaman ini</p>
+          </div>
+          <!-- footer modal -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Tutup Modal</button>
+            <a href="<?php echo base_url()."wel/logout" ?>"><button type="button" class="btn btn-danger">Logout</button></a>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="contain text-center">
-        <form method="post" action="<?php echo site_url('wel/simpan_data')?>">
-            <br>
-            <h1><b><u><font face="Adobe Arabic">Registrasi</font></u></b></h1>
-            <input type="text" class="form-control" name="namas" placeholder="Nama">
-            <input type="text" class="form-control" name="usernames" placeholder="Nama User">
-            <input type="text" class="form-control" name="emails" placeholder="Email">
-            <input type="password" class="form-control" name="passwords" placeholder="Password">
-            <button type="submit" class="btn btn-secondary">Regist</button>
-        </form>
-    </div>
+  </div>
 
-    <hr>
-
-<div class="container">
-    <table class="table" style="text-align:center;">
-        <thead class="">
-            <tr>
-                <th scope="col">No</th>
-                <th scope="col">Nama</th>
-                <th scope="col">Username</th>
-                <th scope="col">Email</th>
-                <th scope="col">Password</th>
-                <th scope="col">Aksi</th>
-            </tr>
-        </thead>
-        <tbody>
-        <?php 
-            if($c_masyarakat > 0){
-                foreach($masyarakat as $datas){
-        ?>  
-                    <tr>
-                        <td><?php echo $datas->id; ?></td>
-                        <td><?php echo $datas->nama; ?></td>
-                        <td><?php echo $datas->username; ?></td>
-                        <td><?php echo $datas->email; ?></td>
-                        <td><?php echo $datas->password; ?></td>
-                        <td>
-                        <div class="col-12">
-                        <?php echo anchor('wel/edit/'.$datas->id,'<button type="button" class="btn btn-success" style="width:50%;">Edit</button>'); ?>
-                        </div>
-                        <div class="col-12 mt-2">
-                            <?php echo anchor('wel/hapus/'.$datas->id,'<button type="button" class="btn btn-danger" style="width:50%;">Delete</button>'); ?>
-                            
-                        </div>
-                        </td>
-                    </tr> 
-        <?php   }       
-        }   else   {
-            ?>
-            <tr>
-                <td colspan="8"><center> Data Kosong </center></td>
-            </tr>
-            <?php
-        }
-            ?>
-        
-        </tbody>
-        </table>
-</div>
+   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 </body>
 </html>
+
+  <div id="myModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <!-- konten modal-->
+        <div class="modal-content">
+          <!-- heading modal -->
+          <div class="modal-header">
+            <h4 class="modal-title">Logout</h4>
+          </div>
+          <!-- body modal -->
+          <div class="modal-body">
+            <p>Tinggalkan Halaman ini</p>
+          </div>
+          <!-- footer modal -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Tutup Modal</button>
+            <a href="<?php base_url().'wel/'?>"><button type="button" class="btn btn-danger" >Tutup Modal</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

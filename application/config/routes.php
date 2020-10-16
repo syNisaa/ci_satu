@@ -52,3 +52,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'wel';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
+
+$route['api/masyarakat/(:num)/(:num)']['GET'] = 'wel/getmasyarakatid/$1/$2';

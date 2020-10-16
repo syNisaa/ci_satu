@@ -55,8 +55,9 @@
         <h2><font face="Courier New"><b>Yuk join dan sampaikan pendapatmu!</b></font></h2>
     </div>
     <h1 style="text-align: center;">Data Siswa</h1>
-<a href="<?php echo base_url("wel/cetak"); ?>">Cetak Data</a><br><br
+<a href="<?php echo base_url("wel/cetak"); ?>">Cetak Data</a><br><br>
 
+<a href="<?php echo base_url("wel/print_xls"); ?>">Cetak Data excel</a><br><br>
     <hr>
 
 <div class="container">

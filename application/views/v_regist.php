@@ -49,11 +49,8 @@
 </style>
 
 <body>
+<?php $this->load->view('admin/dashboard') ?>
 
-    <div class="row"><br>
-        <a href="<?php echo base_url()."wel/index" ?>"><img src="<?php echo base_url('assets/gambarDesain/back.png')?>" alt=""></a>
-        <h2><font face="Courier New"><b>Yuk join dan sampaikan pendapatmu!</b></font></h2>
-    </div>
     <div class="contain text-center">
     <?php foreach($masyarakat as $u){ ?>
 
